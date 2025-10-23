@@ -1,0 +1,61 @@
+{
+  "name": "react-animated-bg-masonry",
+  "version": "0.0.2",
+  "description": "A beautiful animated masonry background component for React and Next.js with GSAP-powered smooth animations",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "import": "./dist/next.mjs",
+      "require": "./dist/next.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx src/next.tsx --format cjs,esm --dts --sourcemap --clean"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "masonry",
+    "animated",
+    "background",
+    "gsap",
+    "component"
+  ],
+  "author": "bily98",
+  "license": "MIT",
+  "peerDependencies": {
+    "gsap": ">=3.12.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "next": ">=13.4.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "gsap": "^3.13.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
